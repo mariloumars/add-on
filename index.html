@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" />
+  <script src="data.js"></script>
+  <title>Follower Fever Add On</title>
+</head>
+<body>
+
+  <nav>
+    <a id="link-logo" href="index.html">
+      <img src="img/logoFollowerFever.png" id="img-logo"/>
+    </a>
+  </nav>
+
+  <div id="content-home">
+    <form method="post" action="turns.html" id="playerForm">
+      <div id="player-form-style">
+      <label for="numbers-players">Enter the numbers of players</label>
+      <input type="number" placeholder="Example 4" id="numbers-players" required>
+      <input type="submit" value="Start the game" id="button-home">
+      </div>
+    </form>
+  </div>
+
+</body>
+  <script>
+    const form = document.getElementById('playerForm')
+    const nbPlayer = document.getElementById('numbers-players')
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const nbPlayerValue = nbPlayer.value;
+
+      localStorage.setItem('nb-player', nbPlayerValue );
+
+      window.location.href="turns.html"
+    })
+
+  </script>
+</html>

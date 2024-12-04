@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" />
+  <title>Follower Fever Count The Turns</title>
+</head>
+
+<body>
+
+  <nav>
+    <a id="link-logo" href="index.html">
+      <img src="img/logoFollowerFever.png" id="img-logo"/>
+    </a>
+  </nav>
+
+  <div id="content-turn">
+    <div id="title-total-turn">
+      <div>
+      <p>Get the most points in</p> 
+      </div>
+      <p id="total-of-turns"></p>
+      <p>turns</p>
+    </div>
+
+    <div id="title-turn-left">
+      <p>You are at turn</p>
+      <p id="nb-of-turns-left">0</p>
+    </div>
+
+    <button id="count-turns">Add a turn</button>
+    
+  </div>
+
+</body>
+<script>
+
+  const nbPlayer = localStorage.getItem('nb-player');
+
+  if (nbPlayer === "3"){
+    document.getElementById("total-of-turns").textContent = "9"
+  }
+  if(nbPlayer === "4"){
+    document.getElementById("total-of-turns").textContent = "12"
+  }
+
+  const buttonCount = document.getElementById("count-turns")
+
+  buttonCount.addEventListener('click', function(e){
+      e.preventDefault(); 
+      const nbTurnContent = document.getElementById("nb-of-turns-left").textContent
+      nbTurnValue = Number(nbTurnContent)
+      nbTurnValue ++
+      document.getElementById("nb-of-turns-left").textContent = nbTurnValue
+    })
+
+</script>
+</html>

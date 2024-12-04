@@ -1,0 +1,86 @@
+p{
+  margin: 0;
+}
+
+body{
+  background-color: #FAF9F6;
+}
+
+#img-logo{
+  width: 40%;
+}
+
+#link-logo{
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav{
+  width: auto;
+  padding: 20px;
+}
+
+#content-home{
+  margin-top: 100px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player-form-style{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: BerlinSans;
+  src: url(font/BRLNSDB.TTF);
+}
+
+form, p, button, input{
+  font-family: BerlinSans;
+  font-size: 20px;
+}
+
+#button-home, #count-turns{
+  border-radius: 10px;
+  padding: 8px 10px;
+  background-color: #354E9D;
+  color: #FAF9F6;
+  border: none;
+}
+
+#numbers-players{
+  padding: 8px 8px;
+}
+
+#content-turn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+#title-total-turn, #title-turn-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#nb-of-turns-left{
+  font-size: 32px;
+  color: #354E9D;
+}
+
