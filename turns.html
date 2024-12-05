@@ -26,7 +26,7 @@
     </div>
 
     <div id="title-turn-left">
-      <p>You are at turn</p>
+      <p id="text">You are at turn</p>
       <p id="nb-of-turns-left">0</p>
     </div>
 
@@ -49,12 +49,22 @@
   const buttonCount = document.getElementById("count-turns")
 
   buttonCount.addEventListener('click', function(e){
-      e.preventDefault(); 
-      const nbTurnContent = document.getElementById("nb-of-turns-left").textContent
+   e.preventDefault();
+ 
+    const turns = Number(document.getElementById("total-of-turns").textContent)
+    const nbTurnContent = document.getElementById("nb-of-turns-left").textContent
+    const nbTurnContentNumber = Number(nbTurnContent)
+    console.log(nbTurnContent)
+
+    if(nbTurnContentNumber < turns ){
       nbTurnValue = Number(nbTurnContent)
       nbTurnValue ++
       document.getElementById("nb-of-turns-left").textContent = nbTurnValue
-    })
+    }else{
+      document.getElementById("text").textContent = "It's the end ! Count your points"
+      document.getElementById("nb-of-turns-left").style.opacity = 0
+    }
+  })
 
 </script>
 </html>
